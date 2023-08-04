@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- Navbar (you can include this if you want the same navigation on all pages) -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Recruitment Startup</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <h1>Job Listings</h1>
+    <ul class="list-group">
+      {% for job in jobs %}
+        <li class="list-group-item">
+          <h4>{{ job.title }}</h4>
+          <p>{{ job.description }}</p>
+          <!-- Add more fields as needed (e.g., company, location, skills, etc.) -->
+        </li>
+      {% empty %}
+        <li class="list-group-item">No job listings available.</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Bootstrap JS script links -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
