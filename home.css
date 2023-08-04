@@ -6,7 +6,7 @@ body {
   
 .header-section {
     /* background-image:('static/images/25.jpg'); */
-    background-image: url('images/27.jpg');
+    background-image: url("images/27.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
